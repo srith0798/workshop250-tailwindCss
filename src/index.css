@@ -99,7 +99,7 @@
 }
 
 .steps__info {
-  @apply w-80 md:w-auto text-center;
+  @apply w-80  md:w-auto text-center;
 }
 
 .header__info {
