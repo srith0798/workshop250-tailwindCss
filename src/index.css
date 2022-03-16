@@ -1,0 +1,128 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.game__item__pic {
+  @apply xl:w-[172px] 2xl:w-[200px] w-[250px];
+}
+
+.game__item__star__box {
+  @apply flex w-10 h-5 bg-[#FF6142] px-4 justify-center items-center rounded;
+}
+
+.game__item__rating {
+  @apply text-[0.59rem] text-white font-semibold;
+}
+
+.game__item__pic__star {
+  @apply w-2 h-2 ml-1;
+}
+
+.game__item__price {
+  @apply text-[#3D61B0] text-[0.8rem];
+}
+
+.game__item__name {
+  @apply text-[0.7rem] font-bold;
+}
+
+.game__item__details {
+  @apply flex w-full justify-between mt-2 items-center;
+}
+
+.money__item {
+  @apply text-center;
+}
+
+.money__label {
+  @apply text-lg font-bold text-blk;
+}
+
+.money__price {
+  @apply text-2xl font-bold;
+}
+
+.sub__headers {
+  @apply font-bold text-xl mb-8;
+}
+
+.earn__item {
+  @apply bg-gry rounded-md h-full flex justify-around w-[32rem] px-5 py-11 m-6;
+}
+
+.earn__item__card {
+  @apply flex flex-col w-48 justify-evenly items-start;
+}
+
+.earn__item__heading {
+  @apply text-blk text-base font-semibold;
+}
+
+.earn__item__info {
+  @apply text-sm w-52 my-5;
+}
+
+.btn {
+  @apply px-2 py-2 md:py-2 text-xs lg:text-[0.8rem] rounded-[24px] w-28;
+}
+
+.toggle {
+  display: none;
+}
+
+.show {
+  display: inline-flex;
+}
+
+@media (min-width: 1200px) {
+  #value {
+    display: flex;
+  }
+}
+
+@media (min-width: 1361px) {
+  .menu__items {
+    @apply grid-cols-6 w-auto place-content-center;
+  }
+}
+
+@media (max-width: 500px) {
+  .game__item__details {
+    @apply w-[120px];
+  }
+}
+
+.game__btn {
+  @apply w-56 py-2 px-3 rounded-full;
+}
+
+.steps__info {
+  @apply w-80 md:w-auto text-center;
+}
+
+.header__info {
+  @apply bg-gry flex p-5 rounded-md;
+}
+
+@media (max-width: 920px) {
+  .join__header {
+    @apply grid grid-cols-1 gap-1;
+  }
+}
+
+@media (min-width: 950px) {
+  .join__header {
+    @apply grid grid-cols-2 gap-1;
+  }
+}
+
+@media (max-width: 1362px) {
+  .menu__bar {
+    @apply bg-stone-300 py-2;
+  }
+  a {
+    @apply hover:border-l-2 hover:text-cyan-400 border-green-300;
+  }
+}
