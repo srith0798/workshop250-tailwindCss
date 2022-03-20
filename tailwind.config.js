@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./public/index.html"],
+  content: ["./public/new.html"],
   theme: {
     colors: {
       primary: "#FFDB0A",
