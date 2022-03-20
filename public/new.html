@@ -5,432 +5,365 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./index.css" />
-    <style>
-      @media (max-width: 510px) {
-        .toggle_menu {
-          justify-content: flex-start;
-        }
-      }
-
-      /* @media (max-width: 500px) {
-        .game_item {
-          width: 190px;
-        }
-      } */
-
-      @media (min-width: 1310px) and (max-width: 1410px) {
-        .menu__items {
-          width: 571px;
-        }
-      }
-      @media (min-width: 1411px) {
-        .menu__items {
-          width: 590px;
-        }
-      }
-
-      @media (min-width: 1363px) {
-        .menu__bar {
-          display: flex !important;
-          flex-direction: row;
-          width: auto;
-        }
-        .toggle_menu {
-          display: none;
-        }
-        .nav__btn {
-          flex-direction: row;
-        }
-      }
-      @media (min-width: 350px) {
-        .new_btn {
-          margin-top: 4px;
-          margin-bottom: 4px;
-        }
-      }
-
-      .menu__toggle:checked ~ .menu__bar {
-        display: none;
-      }
-
-      @media (min-width: 350px) and (max-width: 510px) {
-        .box__img {
-          width: 100px;
-        }
-      }
-
-      @media (max-width: 540px) {
-        .header__info {
-          display: flex;
-          flex-direction: column;
-        }
-        .box__img {
-          width: 120px;
-          margin-top: 16px;
-          margin-bottom: 16px;
-          align-self: center;
-        }
-      }
-
-      .box__img {
-        width: 150px;
-        margin-left: 8px;
-      }
-    </style>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="w-full mx-auto">
-      <div class="flex flex-col px-16 items-center">
-        <nav
-          class="nav__bar inline-flex items-center w-full justify-between my-8 flex-wrap"
-        >
-          <img class="w-64" src="./Images/jpeg/Logo-Color@2x.jpg" alt="logo" />
-          <input type="checkbox" class="hidden menu__toggle" id="check" />
-          <label
-            for="check"
-            class="toggle_menu w-1/3 flex justify-end flex-grow"
-            ><img src="https://img.icons8.com/ios/50/000000/menu--v1.png"
-          /></label>
-          <div class="menu__bar mt-4 w-full flex flex-col">
-            <ul
-              class="grid menu__items gap-2 uppercase font-semibold mx-14 sm:flex-grow sm:w-full xl:w-auto"
+    <div class="px-6 py-4">
+      <div class="">
+        <!-- NavBar -->
+        <nav class="flex flex-wrap lg:justify-between lg:items-center">
+          <img
+            class="w-40 h-8"
+            src="./images/jpeg/Logo-Color@2x.jpg"
+            alt="Logo-Color"
+          />
+          <input class="hidden peer" type="checkbox" id="check" />
+          <label class="ml-auto lg:hidden" for="check">
+            <img
+              class="w-8"
+              src="https://img.icons8.com/ios/50/000000/menu--v1.png"
+            />
+          </label>
+          <ul
+            class="w-full hidden ml-4 lg:ml-0 lg:flex lg:w-auto text-2xs peer-checked:block"
+          >
+            <li class="my-3 lg:mx-2"><a href="">play</a></li>
+            <li class="my-3 lg:mx-2"><a href="">sponsor</a></li>
+            <li class="my-3 lg:mx-2"><a href="">distribute</a></li>
+            <li class="my-3 lg:mx-2"><a href="">retail</a></li>
+            <li class="my-3 lg:mx-2"><a href="">about</a></li>
+            <li class="my-3 lg:mx-2"><a href="">community</a></li>
+          </ul>
+          <div
+            class="w-full ml-4 lg:ml-0 hidden lg:flex lg:w-auto peer-checked:block"
+          >
+            <button
+              class="text-2xs border-1 uppercase text-red mr-4 border-red rounded-3xl px-3 py-2"
             >
-              <li class="my-2"><a href="game_item">play</a></li>
-              <li class="my-2"><a href="game_item">sponsor</a></li>
-              <li class="my-2"><a href="game_item">distribute</a></li>
-              <li class="my-2"><a href="game_item">retail</a></li>
-              <li class="my-2"><a href="game_item">about</a></li>
-              <li class="my-2"><a href="game_item">community</a></li>
-            </ul>
-            <div class="nav__btn flex flex-col ml-14">
-              <button
-                class="border-2 new_btn btn xl:my-0 mr-4 text-[#FF6142] border-[#FF6142]"
-              >
-                Create Game
-              </button>
-              <button class="border-2 new_btn btn text-white bg-[#3D61B0]">
-                Connect Wallet
-              </button>
-            </div>
+              Create Game
+            </button>
+            <button
+              class="text-2xs bg-blue-dark uppercase text-white-normal rounded-3xl px-3 py-2"
+            >
+              Connect Wallet
+            </button>
           </div>
         </nav>
-        <!-- banner Item -->
 
-        <div class="bg-[#FFDB0A] w-full flex items-center rounded-lg">
+        <!-- banner Item -->
+        <div
+          class="my-6 px-5 py-8 md:p-5 flex flex-col text-center md:text-left md:items-center md:flex-row bg-primary rounded-4xl"
+        >
           <img
-            class="w-12 bg-transparent"
+            class="h-56 hidden md:block"
             src="./Images/banner-icon.svg"
             alt="banner-icon"
           />
-          <div class="mx-auto px-5">
-            <h1 class="text-3xl xl:text-2xl">Decentralized lottery</h1>
-            <h3 class="text-2xl my-4 xl:text-xl">
+          <div class="mx-4">
+            <h1
+              class="text-black-normal xl:text-sm xs:text-xs vxs:text-1xs font-bold"
+            >
+              Decentralized lottery
+            </h1>
+            <h3 class="font-semi-bold xl:text-sm vxs:text-3xs xs:text-1xs">
               for the people, by the people
             </h3>
-            <p class="my-5">
+            <p class="text-3xs">
               Lottery of the People is a distributed system which allows anyone
               to create, distribute, buy or sell digital NFT lottery tickets
             </p>
             <button
-              class="uppercase bg-[#FF6142] w-56 px-5 py-3 text-white text-xs rounded-[24px]"
+              class="bg-red py-2 px-4 rounded-3xl text-4xs my-4 md:text-3xs"
             >
               play and learn
             </button>
           </div>
           <img
-            class="hidden xl:inline-block"
-            src="./Images/map-icon.svg"
+            class="w-96 m-auto"
+            src="./images/jpeg/Group 679.png"
             alt="map-icon"
           />
         </div>
+
         <!-- Item Section -->
-        <div class="self-start w-full mt-8 mb-5 flex justify-between">
-          <h1 class="game_item text-lg font-semibold">Top Games</h1>
-          <p class="game_item">
+        <div class="flex justify-between items-center">
+          <h1 class="font-semi-bold sm:text-sm">Top Games</h1>
+          <p class="text-1xs text-blue-dark">
             see all
-            <img class="inline ml-3" src="./Images/arrow.png" alt="arrow" />
+            <img
+              class="ml-3 float-right"
+              src="./Images/arrow.png"
+              alt="arrow"
+            />
           </p>
         </div>
 
         <!-- Items Container -->
         <ul
-          class="grid grid-cols-2 gap-9 md:grid-cols-3 md:gap-6 lg:grid-cols-4 lg:gap-4 xl:grid-cols-6 xl:gap-9"
+          class="grid mt-5 grid-cols-1 place-items-center xs:grid-cols-2 xs:gap-2 sm:grid-cols-3 sm:gap-2 lg:grid-cols-6 lg:gap-2"
         >
-          <li class="game_item">
-            <img
-              class="game__item__pic"
-              src="./Images/Mask Group 2@2x.jpg"
-              alt="item-2"
-            />
-            <div class="game__item__details">
-              <p class="game__item__name">Big Win</p>
-              <div class="game__item__star__box">
-                <p class="game__item__rating">4.1</p>
-                <img
-                  class="game__item__pic__star"
-                  src="./Images/star.png"
-                  alt="star"
-                />
+          <li class="mb-4">
+            <img class="" src="./Images/Mask Group 2@2x.jpg" alt="item-2" />
+            <div class="text-4xs xs:text-5xs flex">
+              <p class="">Big Win</p>
+              <div class="flex items-center m-auto">
+                <p class="">4.1</p>
+                <img class="w-4 h-4" src="./Images/star.png" alt="star" />
               </div>
-              <p class="game__item__price">$5.00</p>
+              <p class="">$5.00</p>
             </div>
           </li>
 
-          <li class="game_item">
-            <img
-              class="game__item__pic"
-              src="./Images/Mask Group 3@2x.jpg"
-              alt="item-3"
-            />
-            <div class="game__item__details">
-              <p class="game__item__name">Super Cross Word</p>
-              <div class="game__item__star__box">
-                <p class="game__item__rating">4.7</p>
-                <img
-                  class="game__item__pic__star"
-                  src="./Images/star.png"
-                  alt="star"
-                />
+          <li class="mb-4">
+            <img class="" src="./Images/Mask Group 3@2x.jpg" alt="item-3" />
+            <div class="text-4xs xs:text-5xs flex">
+              <p class="">Super Cross Word</p>
+              <div class="flex items-center m-auto">
+                <p class="">4.7</p>
+                <img class="w-4 h-4" src="./Images/star.png" alt="star" />
               </div>
-              <p class="game__item__price">$5.00</p>
+              <p class="">$5.00</p>
             </div>
           </li>
 
-          <li class="game_item">
-            <img
-              class="game__item__pic"
-              src="./Images/Mask Group 4@2x.png"
-              alt="item-4"
-            />
-            <div class="game__item__details">
-              <p class="game__item__name">Scratch and Win</p>
-              <div class="game__item__star__box">
-                <p class="game__item__rating">4.6</p>
-                <img
-                  class="game__item__pic__star"
-                  src="./Images/star.png"
-                  alt="star"
-                />
+          <li class="mb-4">
+            <img class="" src="./Images/Mask Group 4@2x.png" alt="item-4" />
+            <div class="text-4xs xs:text-5xs flex">
+              <p class="">Scratch and Win</p>
+              <div class="flex items-center m-auto">
+                <p class="">4.6</p>
+                <img class="w-4 h-4" src="./Images/star.png" alt="star" />
               </div>
-              <p class="game__item__price">$2.00</p>
+              <p class="">$2.00</p>
             </div>
           </li>
 
-          <li class="game_item">
-            <img
-              class="game__item__pic"
-              src="./Images/Mask Group 5@2x.png"
-              alt="item-5"
-            />
-            <div class="game__item__details">
-              <p class="game__item__name">Diamond Lotto</p>
-              <div class="game__item__star__box">
-                <p class="game__item__rating">4.2</p>
-                <img
-                  class="game__item__pic__star"
-                  src="./Images/star.png"
-                  alt="star"
-                />
+          <li class="mb-4">
+            <img class="" src="./Images/Mask Group 5@2x.png" alt="item-5" />
+            <div class="text-4xs xs:text-5xs flex">
+              <p class="">Diamond Lotto</p>
+              <div class="flex items-center m-auto">
+                <p class="">4.2</p>
+                <img class="w-4 h-4" src="./Images/star.png" alt="star" />
               </div>
-              <p class="game__item__price">$10.00</p>
+              <p class="">$10.00</p>
             </div>
           </li>
 
-          <li class="game_item">
-            <img
-              class="game__item__pic"
-              src="./Images/Mask Group 6@2x.png"
-              alt="item-6"
-            />
-            <div class="game__item__details">
-              <p class="game__item__name">Royal Slots</p>
-              <div class="game__item__star__box">
-                <p class="game__item__rating">4.1</p>
-                <img
-                  class="game__item__pic__star"
-                  src="./Images/star.png"
-                  alt="star"
-                />
+          <li class="mb-4">
+            <img class="" src="./Images/Mask Group 6@2x.png" alt="item-6" />
+            <div class="text-4xs xs:text-5xs flex">
+              <p class="">Royal Slots</p>
+              <div class="flex items-center m-auto">
+                <p class="">4.1</p>
+                <img class="w-4 h-4" src="./Images/star.png" alt="star" />
               </div>
-              <p class="game__item__price">$4.00</p>
+              <p class="">$4.00</p>
             </div>
           </li>
 
-          <li class="game_item">
-            <img
-              class="game__item__pic"
-              src="./Images/Mask Group 7@2x.png"
-              alt="item-1"
-            />
-            <div class="game__item__details">
-              <p class="game__item__name">Lucky Hunt</p>
-              <div class="game__item__star__box">
-                <p class="game__item__rating">4.0</p>
-                <img
-                  class="game__item__pic__star"
-                  src="./Images/star.png"
-                  alt="star"
-                />
+          <li class="mb-4">
+            <img class="" src="./Images/Mask Group 7@2x.png" alt="item-1" />
+            <div class="text-4xs xs:text-5xs flex">
+              <p class="">Lucky Hunt</p>
+              <div class="flex items-center m-auto">
+                <p class="">4.0</p>
+                <img class="w-4 h-4" src="./Images/star.png" alt="star" />
               </div>
-              <p class="game__item__price">$6.00</p>
+              <p class="">$6.00</p>
             </div>
           </li>
         </ul>
 
         <!-- Mini Statement details -->
-        <h1 class="self-start mt-8 text-lg font-semibold">
-          Total Money Earned till date
-        </h1>
+        <h1 class="font-semi-bold sm:text-sm">Total Money Earned till date</h1>
         <ul
-          class="grid grid-cols-2 mt-8 gap-16 md:grid-cols-3 md:gap-44 xl:grid-cols-5 xl:gap-16"
+          class="grid my-8 xs:grid-cols-2 xs:gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5 lg:gap-4"
         >
-          <li class="money__item">
-            <h5 class="money__label">Won by Game Players</h5>
-            <p class="money__price">$45,485</p>
+          <li class="text-center mb-4">
+            <h1 class="text-3xs xs:text-xs font-semi-bold">
+              Won by Game Players
+            </h1>
+            <p class="font-semi-bold text-sm xs:text-md">$45,485</p>
           </li>
 
-          <li class="money__item">
-            <h1 class="money__label">By Game Creators</h1>
-            <p class="money__price">$15,599</p>
+          <li class="text-center mb-4">
+            <h1 class="text-3xs xs:text-xs font-semi-bold">By Game Creators</h1>
+            <p class="font-semi-bold text-sm xs:text-md">$15,599</p>
           </li>
 
-          <li class="money__item">
-            <h1 class="money__label">By Sponsors</h1>
-            <p class="money__price">$8,981</p>
+          <li class="text-center mb-4">
+            <h1 class="text-3xs xs:text-xs font-semi-bold">By Sponsors</h1>
+            <p class="font-semi-bold text-sm xs:text-md">$8,981</p>
           </li>
 
-          <li class="money__item">
-            <h1 class="money__label">By Distributors</h1>
-            <p class="money__price">$8,981</p>
+          <li class="text-center mb-4">
+            <h1 class="text-3xs xs:text-xs font-semi-bold">By Distributors</h1>
+            <p class="font-semi-bold text-sm xs:text-md">$8,981</p>
           </li>
 
-          <li class="money__item">
-            <h1 class="money__label">By Retailers</h1>
-            <p class="money__price">$19,120</p>
+          <li class="text-center mb-4">
+            <h1 class="text-3xs xs:text-xs font-semi-bold">By Retailers</h1>
+            <p class="font-semi-bold text-sm xs:text-md">$19,120</p>
           </li>
         </ul>
 
         <!-- Join Headers -->
-        <h1 class="self-start mt-8 mb-6 text-lg font-semibold">
-          Join and Earn
-        </h1>
+        <h1 class="my-5 font-semi-bold sm:text-sm">Join and Earn</h1>
 
-        <div class="join__header">
-          <div class="header__info mb-3">
+        <div class="grid grid-cols-1 gap-1 lg:grid-cols-2 lg:gap-2">
+          <div
+            class="bg-white-dark p-4 header__info flex flex-col sm:flex-row items-center mb-3"
+          >
             <div class="">
-              <h1 class="text-lg font-semibold">For Game Designers</h1>
-              <p class="text-sm my-7">
+              <h1 class="text-xs font-semibold">For Game Designers</h1>
+              <p class="text-2xs my-4 sm:w-96 md:w-auto">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam
                 sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Molestie
                 at elementum eu facilisis sed odio morbi quis.
               </p>
-              <button class="uppercase text-bl border border-bl game__btn">
+              <button
+                class="uppercase text-4xs md:text-2xs border rounded-3xl px-3 py-2 text-blue-dark border-blue-dark game__btn mb-4"
+              >
                 Create Game
               </button>
             </div>
-            <img class="box__img" src="./Images/distribut.svg" alt="game" />
+            <img
+              class="box__img sm:ml-auto"
+              src="./Images/distribut.svg"
+              alt="game"
+            />
           </div>
 
-          <div class="header__info mb-3">
+          <div
+            class="bg-white-dark p-4 header__info flex flex-col sm:flex-row items-center mb-3"
+          >
             <div class="">
-              <h1 class="text-lg font-semibold">For Lottery Sponsors</h1>
-              <p class="text-sm my-7">
+              <h1 class="text-xs font-semibold">For Lottery Sponsors</h1>
+              <p class="text-2xs my-4 sm:w-96 md:w-auto">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam
                 sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Molestie
                 at elementum eu facilisis sed odio morbi quis.
               </p>
-              <button class="uppercase text-bl border border-bl game__btn">
+              <button
+                class="uppercase text-4xs md:text-2xs border rounded-3xl px-3 py-2 text-blue-dark border-blue-dark game__btn mb-4"
+              >
                 sponsor Game
               </button>
             </div>
-            <img class="box__img" src="./Images/sponsor.svg" alt="game" />
+            <img
+              class="box__img sm:ml-auto"
+              src="./Images/sponsor.svg"
+              alt="game"
+            />
           </div>
 
-          <div class="header__info mb-3">
+          <div
+            class="bg-white-dark p-4 header__info flex flex-col sm:flex-row items-center mb-3"
+          >
             <div class="">
-              <h1 class="text-lg font-semibold">For Distributors</h1>
-              <p class="text-sm my-7">
+              <h1 class="text-xs font-semibold">For Distributors</h1>
+              <p class="text-2xs my-4 sm:w-96 md:w-auto">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam
                 sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Molestie
                 at elementum eu facilisis sed odio morbi quis.
               </p>
-              <button class="uppercase text-bl border border-bl game__btn">
+              <button
+                class="uppercase text-4xs md:text-2xs border rounded-3xl px-3 py-2 text-blue-dark border-blue-dark game__btn mb-4"
+              >
                 Become a distributor
               </button>
             </div>
-            <img class="box__img" src="./Images/Group 606.svg" alt="game" />
+            <img
+              class="box__img sm:ml-auto"
+              src="./Images/Group 606.svg"
+              alt="game"
+            />
           </div>
 
-          <div class="header__info mb-3">
+          <div
+            class="bg-white-dark p-4 header__info flex flex-col sm:flex-row items-center mb-3"
+          >
             <div class="">
-              <h1 class="text-lg font-semibold">For Retailers</h1>
-              <p class="text-sm my-7">
+              <h1 class="text-xs font-semibold">For Retailers</h1>
+              <p class="text-2xs my-4 sm:w-96 md:w-auto">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam
                 sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Molestie
                 at elementum eu facilisis sed odio morbi quis.
               </p>
-              <button class="uppercase text-bl border border-bl game__btn">
+              <button
+                class="uppercase text-4xs md:text-2xs border rounded-3xl px-3 py-2 text-blue-dark border-blue-dark game__btn mb-4"
+              >
                 Become a retailer
               </button>
             </div>
-            <img class="box__img" src="./Images/retailer.svg" alt="game" />
+            <img
+              class="box__img sm:ml-auto"
+              src="./Images/retailer.svg"
+              alt="game"
+            />
           </div>
         </div>
 
         <!-- Explain Lottery -->
-        <h1 class="self-start mt-8 mb-5 text-lg font-semibold">
-          How Lottery Works
-        </h1>
+        <h1 class="my-5 font-semi-bold sm:text-sm">How Lottery Works</h1>
 
-        <ul class="grid lg:grid-cols-3 lg:gap-3 xl:grid-cols-6 xl:gap-1">
-          <li class="mb-8 flex flex-col items-center">
-            <img class="w-16" src="./Images/s1.svg" alt="s1" />
-            <h1 class="text-lg font-semibold">Step 1</h1>
-            <p class="steps__info">
+        <ul
+          class="grid place-content-center grid-cols-1 gap-0 sm:grid-cols-3 sm:gap-2 xl:grid-cols-6 xl:gap-4"
+        >
+          <li class="mb-5 text-center">
+            <img class="w-16 m-auto mb-3" src="./Images/s1.svg" alt="s1" />
+            <h1 class="text-xs font-semibold">Step 1</h1>
+            <p class="text-1xs">
               Game designer creates a game and posts it for Sponsorship
             </p>
           </li>
 
-          <li class="mb-8 flex flex-col items-center">
-            <img class="w-16" src="./Images/s2.svg" alt="s2" />
-            <h1 class="text-lg font-semibold">Step 2</h1>
-            <p class="steps__info">Distributors signs up for Retailers</p>
+          <li class="mb-5 text-center">
+            <img class="w-16 m-auto mb-3" src="./Images/s2.svg" alt="s2" />
+            <h1 class="text-xs font-semibold">Step 2</h1>
+            <p class="text-1xs">Distributors signs up for Retailers</p>
           </li>
 
-          <li class="mb-8 flex flex-col items-center">
-            <img class="w-16" src="./Images/s3.svg" alt="s3" />
-            <h1 class="text-lg font-semibold">Step 3</h1>
-            <p class="steps__info">
+          <li class="mb-5 text-center">
+            <img class="w-16 m-auto mb-3" src="./Images/s3.svg" alt="s3" />
+            <h1 class="text-xs font-semibold">Step 3</h1>
+            <p class="text-1xs">
               Retailers sells tickets and games to Customers
             </p>
           </li>
 
-          <li class="mb-8 flex flex-col items-center">
-            <img class="w-16" src="./Images/s4.svg" alt="s4" />
-            <h1 class="text-lg font-semibold">Step 4</h1>
-            <p class="steps__info">
+          <li class="mb-5 text-center">
+            <img class="w-16 m-auto mb-3" src="./Images/s4.svg" alt="s4" />
+            <h1 class="text-xs font-semibold">Step 4</h1>
+            <p class="text-1xs">
               Retailers sells tickets and games to Customers
             </p>
           </li>
 
-          <li class="mb-8 flex flex-col items-center">
-            <img class="w-16" src="./Images/s5.svg" alt="s5" />
-            <h1 class="text-lg font-semibold">Step 5</h1>
-            <p class="steps__info">
+          <li class="mb-5 text-center">
+            <img class="w-16 m-auto mb-3" src="./Images/s5.svg" alt="s5" />
+            <h1 class="text-xs font-semibold">Step 5</h1>
+            <p class="text-1xs">
               Customers selects a game to play and makes payment in crypto or
               cash to the Retailer
             </p>
           </li>
 
-          <li class="mb-8 flex flex-col items-center">
-            <img class="w-16" src="./Images/s6.svg" alt="s6" />
-            <h1 class="text-lg font-semibold">Step 6</h1>
-            <p class="steps__info">
+          <li class="mb-5 text-center">
+            <img class="w-16 m-auto mb-3" src="./Images/s6.svg" alt="s6" />
+            <h1 class="text-xs font-semibold">Step 6</h1>
+            <p class="text-1xs">
               Everyone involved in the slots, get the commission and the winner
               gets the profit
             </p>
